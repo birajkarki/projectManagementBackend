@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 
 
 dotenv.config({
-    paath: './config.env'
+    path: './config.env'
 })
 
 const app = express();
@@ -21,5 +21,5 @@ app.get('/biraj', (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on Port ${port} in ${process.env.NODE_ENV} Mode`);
 });
